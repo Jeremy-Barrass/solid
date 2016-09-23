@@ -4,6 +4,7 @@ namespace BreakingSingleResponsibility
 {
     public class Order
     {
+        private ErrorLog log = new ErrorLog();
         public void PlaceOrder()
         {
             try
@@ -12,7 +13,7 @@ namespace BreakingSingleResponsibility
             }
             catch (Exception ex)
             {
-                System.IO.File.WriteAllText(@"C:\Error.txt", ex.ToString());
+                log.LogErrorToFile(ex);
             }
         }
     }

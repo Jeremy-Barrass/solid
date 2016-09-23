@@ -4,6 +4,7 @@ namespace BreakingSingleResponsibility
 {
     public class Customer
     {
+        private ErrorLog log = new ErrorLog();
         public void Add()
         {
             try
@@ -12,7 +13,7 @@ namespace BreakingSingleResponsibility
             }
             catch (Exception ex)
             {
-                System.IO.File.WriteAllText(@"C:\Error.txt", ex.ToString());
+                log.LogErrorToFile(ex);
             }
         }
     }
