@@ -8,6 +8,7 @@ namespace BreakingOpenClosedPrinciple
 {
     class FeaturedProduct : Product
     {
+        public FeaturedProduct(decimal price) : base(price) { }
         public override void Render()
         {
             Console.WriteLine("******* WOO HOOO *******");

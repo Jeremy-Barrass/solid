@@ -10,8 +10,8 @@ namespace BreakingOpenClosedPrinciple
     {
         public static void Main()
         {
-            var product1 = new Product(4.52m, ProductType.Standard);
-            var product2 = new Product(3.99m, ProductType.Featured);
+            var product1 = new Product(4.52m);
+            var product2 = new FeaturedProduct(3.99m);
 
             var products = new List<Product>();
 

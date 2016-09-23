@@ -4,13 +4,11 @@ namespace BreakingOpenClosedPrinciple
 {
     public class Product
     {
-        private readonly ProductType _type;
-        private readonly decimal _price;
+        protected readonly decimal _price;
 
-        public Product(decimal price, ProductType type)
+        public Product(decimal price)
         {
             _price = price;
-            _type = type;
         }
 
         /// <summary>
