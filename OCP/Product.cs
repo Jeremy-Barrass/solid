@@ -16,19 +16,9 @@ namespace BreakingOpenClosedPrinciple
         /// <summary>
         /// Render has one behaviour for Standard Products Types, and a different behaviour for Featured Products types. 
         /// </summary>
-        public void Render()
+        public virtual void Render()
         {
-            if (_type == ProductType.Standard)
-            {
-                Console.WriteLine("Hi, I am a standard product that costs £{0}", _price);
-            }
-
-            if (_type == ProductType.Featured)
-            {
-                Console.WriteLine("******* WOO HOOO *******");
-                Console.WriteLine("******* FEATURED PRODUCT HERE **********");
-                Console.WriteLine("******* I COST £{0} **********", _price);
-            }
+            Console.WriteLine("Hi, I am a standard product that costs £{0}", _price);
         }
 
         public string[] GetImageFileNames()
